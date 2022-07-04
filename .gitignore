@@ -2,19 +2,15 @@
 # the parent path must matched before.
 #
 
-/**
+/*
 !/.gitignore
 
 ###############################
 # Un-ignore the affected subdirectory
-!/alacritty/
-/alacritty/**
-!/sway/
-/sway/**
-!/nvim/
-/nvim/**
-!/fish/
-/fish/**
+!/alacritty
+!/sway
+!/nvim
+!/fish
 # Ignore subdirectory and all including directories and files to match pattern as valid for the next pattern
 # This pattern only works with the two previous patterns
 # (i remember it was working alone on older git versions)

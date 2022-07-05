@@ -17,3 +17,5 @@ font:
   size: 19
 shell:
   program: /usr/bin/tmux
+window:
+  opacity: 0.6

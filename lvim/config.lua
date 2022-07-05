@@ -1,6 +1,5 @@
 --[[
 lvim is the global options object
-
 Linters should be
 filled in as strings with either
 a global executable or a path to
@@ -16,9 +15,6 @@ lvim.foldmethod = "indent"
 
 vim.opt.list = true
 vim.opt.listchars:append("eol: ")
-require("indent_blankline").setup {
-  show_end_of_line = false,
-}
 -- keymaps
 lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -90,6 +86,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "kotlin"
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -162,16 +159,21 @@ lvim.plugins = {
   { "ellisonleao/gruvbox.nvim" },
   { "jeffkreeftmeijer/vim-numbertoggle" },
   { "lukas-reineke/indent-blankline.nvim" },
+  { "udalov/kotlin-vim" },
+  -- { "nvim-lua/plenary.nvim" },
   -- {
   --   "folke/trouble.nvim",
   --   cmd = "TroubleToggle",
   -- },
-  { "udalov/kotlin-vim" },
+  -- { "udalov/kotlin-vim" },
   { "Shatur/neovim-session-manager" }
-  -- { "xolox/vim-sessions" }
+  -- { "xolox/vim-sessions", }
 }
 
 
+require("indent_blankline").setup {
+  show_end_of_line = false,
+}
 local Path = require('plenary.path')
 require('session_manager').setup({
   sessions_dir = Path:new(vim.fn.stdpath('data'), 'sessions'), -- The directory where the session files will be saved.

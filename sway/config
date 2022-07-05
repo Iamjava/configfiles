@@ -27,7 +27,6 @@ set $term alacritty
 
 #WICHTIG für Intellij und co
 exec wmname LG3D
-exec waybar 
 exec export _JAVA_AWT_WM_NONREPARENTING=1
 exec export AWT_TOOLKIT=MToolkit
 
@@ -100,9 +99,9 @@ input "type:keyboard" {
 #exec_always waybar
 
 
-bar { 
-     swaybar_command waybar
-}
+#bar { 
+#     swaybar_command waybar
+#}
 #bar {
 #    position top
 
@@ -256,8 +255,9 @@ bindsym $mod+r mode "resize"
 
 
 
-exec swaymsg "workspace terminal; exec gnome-terminal;"
+exec swaymsg "workspace terminal; exec alacritty;"
 exec swaymsg "workspace firefox; exec ffire;"
+exec waybar
 
 exec_always nm-applet --indicator
 #

@@ -15,6 +15,8 @@ abbr vimcfg "vim ~/.config/nvim/init.lua"
 abbr lvim "~/.local/bin/lvim"
 abbr r "ranger"
 abbr o "gio open"
+abbr sound "pavucontrol"
+abbr wifi "nm-connection-editor"
 
 
 fish_vi_key_bindings
